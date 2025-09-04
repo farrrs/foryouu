@@ -1,0 +1,259 @@
+:root {
+  --accent: #ff4d6d;
+  --bg: #fff0f5;
+  --text: #2a2a2a;
+  --muted: #6b6b6b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffd1dc, #ffe6f0, #e0bbff);
+  color: var(--text);
+  overflow-x: hidden;
+  text-align: center;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+/* Hero */
+.hero {
+  padding: 60px 20px;
+}
+.hero h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5rem;
+  color: var(--accent);
+  margin: 0;
+}
+.hero p {
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+/* Surat cinta */
+.letter {
+  margin: 40px auto;
+  max-width: 600px;
+  padding: 20px;
+}
+.letter h2 {
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+.scroll {
+  background: #fff;
+  border: 2px dashed #ff9ebb;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(255, 77, 109, 0.2);
+  text-align: left;
+}
+
+/* Galeri */
+.gallery {
+  margin: 40px auto;
+  max-width: 800px;
+}
+.gallery h2 {
+  color: var(--accent);
+}
+.photos {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.frame {
+  width: 180px;
+  height: 180px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 6px;
+  border: 4px solid #ff9ebb;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(255, 77, 109, 0.3);
+}
+.frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Quotes */
+.quotes {
+  margin: 40px auto;
+}
+.quotes h2 {
+  color: var(--accent);
+}
+.quote-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 0 6px 20px rgba(255, 77, 109, 0.2);
+}
+#quote {
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* Tombol */
+.button-sec {
+  margin: 40px 0;
+}
+.hug-btn {
+  background: var(--accent);
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 14px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(255, 77, 109, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.hug-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(255, 77, 109, 0.5);
+}
+
+/* Footer */
+footer {
+  margin: 50px 0 20px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Animasi hati jatuh */
+.hearts::before,
+.hearts::after {
+  content: "";
+  position: fixed;
+  top: -100px;
+  width: 100%;
+  height: 100%;
+  background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') repeat;
+  background-size: 40px 40px;
+  animation: fall 15s linear infinite;
+  opacity: 0.2;
+}
+.hearts::after {
+  animation-duration: 25s;
+  opacity: 0.15;
+}
+
+@keyframes fall {
+  0% { background-position: 0 -100px; }
+  100% { background-position: 0 100%; }
+}
+#slideshow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: opacity 1s ease, transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#slideshow img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 8px 20px rgba(255, 77, 109, 0.5);
+}
+.photos {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 77, 109, 0.7);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 6px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: rgba(255, 77, 109, 1);
+}
+
+.prev {
+  left: -50px;
+}
+
+.next {
+  right: -50px;
+}
+/* Footer */
+footer {
+  margin: 50px 0 20px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Animasi hati jatuh */
+.hearts::before,
+.hearts::after {
+  content: "";
+  position: fixed;
+  top: -100px;
+  width: 100%;
+  height: 100%;
+  background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') repeat;
+  background-size: 40px 40px;
+  animation: fall 15s linear infinite;
+  opacity: 0.2;
+}
+.hearts::after {
+  animation-duration: 25s;
+  opacity: 0.15;
+}
+
+@keyframes fall {
+  0% { background-position: 0 -100px; }
+  100% { background-position: 0 100%; }
+}
+.hug-btn {
+  display: inline-block;
+  background: #ff4d6d;
+  color: white;
+  padding: 14px 32px;
+  margin-top: 20px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif; /* pakai font baru */
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 77, 109, 0.4);
+}
+
+.hug-btn:hover {
+  background: #ff1f4d;
+  transform: scale(1.08);
+  box-shadow: 0 6px 14px rgba(255, 31, 77, 0.6);
+}
